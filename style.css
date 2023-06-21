@@ -24,8 +24,8 @@ body {
     font-size: medium;
 }                               span {font-style: normal;}
 .screen {
-    background-color: rgb(19, 88, 35);
-    height: 70px;
+    background-color: #3e7e2f;
+    min-height: 70px;
     margin-right:auto;
     margin-left: auto;
     width: 280px;
@@ -37,16 +37,56 @@ body {
     font-size: xx-large;
     z-index: 1;
 }
+
 .underscreen {
-    height: 20px;
-    background-color: beige;
+    height: 29px;
+    background-color: rgb(219, 219, 219);
     width: 280px;
     margin-left: auto;
     margin-right: auto;
     margin-top: -10px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    display: flex;
+    
+    
+    
 }
+
+.underscreen button {
+    height: 100%;
+    flex-basis: 50%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    font-family: monospace;
+    background-color:rgba(240, 255, 255, 0);
+    border: none;
+    font-weight: bold; 
+    box-shadow: 0px 2px rgb(20, 20, 20);
+}
+.underscreen button:active {
+    transform: translateY(0.5px);
+    box-shadow: 0px 1.5px rgb(20, 20, 20);
+    background-color: rgb(206, 206, 206);
+}
+.underscreen button:first-child {
+    border-right: 1px solid black;
+    border-bottom-left-radius: 5px;
+}
+.underscreen button:last-child {
+   
+    border-bottom-right-radius: 5px;
+}
+
+.smolborder {
+    height: 2px;
+    width: 159px;
+    border-right: 1px solid black ;
+    margin-top: 0px;
+}
+
+
 .buttons {
     width: 280px;
     margin-right:auto;
@@ -56,7 +96,7 @@ body {
     gap: 20px;
     justify-content: space-between;
     flex-grow: 1;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 20px;
 } 
 .button {
