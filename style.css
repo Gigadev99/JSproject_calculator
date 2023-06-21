@@ -41,16 +41,13 @@ body {
 .underscreen {
     height: 29px;
     background-color: rgb(219, 219, 219);
-    width: 280px;
+    width: 270px;
     margin-left: auto;
     margin-right: auto;
     margin-top: -10px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    display: flex;
-    
-    
-    
+    display: flex;   
 }
 
 .underscreen button {
@@ -93,7 +90,7 @@ body {
     margin-left: auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
     justify-content: space-between;
     flex-grow: 1;
     margin-top: 20px;
