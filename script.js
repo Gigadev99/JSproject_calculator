@@ -17,8 +17,8 @@ const input = function(e) {
     if (e.target.className.includes('sign') && signflag == 0) {
         num2 = Number(screen.textContent)
         ans = operate(num1, operation, num2)
-        screen.textContent = Number(ans.toFixed(9))
-        num1 = screen.textContent
+        screen.textContent = Number(Number(ans).toFixed(9)) //sometimes tofixed doesnt work as ans is a string so convert it to number first
+        num1 = screen.textContent // then convert the result to number again to remove unnecessary zeroes (.000)
         signflag = 1;
         operation = e.target.id
         dot.addEventListener('click', input)
@@ -43,7 +43,7 @@ const input = function(e) {
     if (e.target.id == "equals") {
         num2 = Number(screen.textContent)
         ans = operate(num1, operation, num2)
-        screen.textContent = Number(ans.toFixed(9))
+        screen.textContent = Number(Number(ans).toFixed(9))
         signflag = undefined // bad practice but atleast it works
         operation = undefined
         return
