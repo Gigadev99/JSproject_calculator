@@ -69,11 +69,11 @@ body {
     box-shadow: 0px 1.5px rgb(20, 20, 20);
     background-color: rgb(206, 206, 206);
 }
-.underscreen button:first-child {
+#ac {
     border-right: 1px solid black;
     border-bottom-left-radius: 5px;
 }
-.underscreen button:last-child {
+#del {
    
     border-bottom-right-radius: 5px;
 }

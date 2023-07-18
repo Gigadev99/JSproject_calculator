@@ -15,7 +15,7 @@ const input = function(e) {
         num2 = Number(screen.textContent)
         ans = operate(num1, operation, num2)
         screen.textContent = Number(Number(ans).toFixed(9)) //sometimes toFixed doesnt work as ans is a string so convert it to number first
-        num1 = screen.textContent // then convert the result to number again to remove unnecessary zeroes (.000)
+        num1 = screen.textContent                           //then convert the result to number again to remove unnecessary zeroes (.000)
         signflag = 1;
         operation = e.target.id
         dot.addEventListener('click', input)
@@ -52,8 +52,19 @@ const input = function(e) {
 const buttons = document.querySelectorAll(".button")
 buttons.forEach(button => button.addEventListener('click', input))
 const dot = document.getElementById(".")
-//Keyboard section
+function del() {
+    if(!isNaN(screen.textContent)) screen.textContent = screen.textContent.slice(0, -1)
+}
+document.getElementById("del").onclick = del;
+function ac() {
+    screen.textContent = 0;
+    dot.addEventListener('click', input);
+    operation = undefined
+}
+document.getElementById("ac").onclick = ac;
+// Keyboard section
 document.addEventListener('keydown', e => {
+    if (e.key == "Backspace") del();
     let button = document.getElementById(e.key);
     if (button == undefined) return;
     button.click();
