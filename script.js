@@ -42,7 +42,7 @@ const input = function(e) {
     if (e.target.id == "=") {
         num2 = Number(screen.textContent)
         ans = operate(num1, operation, num2)
-        screen.textContent = Number(ans).toFixed(9)
+        screen.textContent = Number(Number(ans).toFixed(9))
         signflag = undefined // bad practice but atleast it works
         operation = undefined
         return
@@ -57,5 +57,10 @@ document.addEventListener('keydown', e => {
     let button = document.getElementById(e.key);
     if (button == undefined) return;
     button.click();
-    console.log(e.key)
+    button.style = "border:2px solid black;border-bottom-color:rgb(80, 80, 80); border-right-color:rgb(80, 80, 80);"
 })
+document.addEventListener('keyup', e => {
+    let button = document.getElementById(e.key);
+    if (button == undefined) return;
+    button.style = "border:2px solid black;border-top-color:rgb(80, 80, 80); border-left-color:rgb(80, 80, 80);"
+}) // this is the animation of the button when pressed and released

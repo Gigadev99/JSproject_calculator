@@ -97,6 +97,7 @@ body {
     flex-grow: 1;
     margin-top: 20px;
     margin-bottom: 20px;
+    
 } 
 .button {
     width:50px;
@@ -112,4 +113,5 @@ body {
     color: whitesmoke;
     font-size:30px;
     font-weight: bolder;
+    
 }
